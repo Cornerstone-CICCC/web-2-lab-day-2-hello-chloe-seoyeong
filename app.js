@@ -110,15 +110,17 @@ $(function() {
       data: 'GET',
       success: function(response) {
         const overlay = `<div class="overlay">
-          <div class="modal">
+        </div>`;
+        const modal = `<div class="modal">
             <h2>${response.title}</h2>
             <p>${response.body}</p>
             <span><i>Views: </i>${response.views}</span>
             <button>Close Modal</button>
-          </div>
-        </div>`;
+          </div>`;
         container.append(overlay);
+        $('.overlay').append(modal);
 
+        // Closing Modal
         $('.modal').find('button').on('click', function() {
           $('.overlay').remove();
         })
