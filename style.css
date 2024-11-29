@@ -137,3 +137,10 @@ ul li:not(:last-child) {
 .modal button:hover {
   background-color: #333;
 }
+
+/* custom css */
+.info__content ul li {
+  flex-direction: row;
+  border-bottom: 0;
+  padding: 6px 0 0 0;
+}
